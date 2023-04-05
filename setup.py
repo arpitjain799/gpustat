@@ -13,19 +13,7 @@ def read_readme():
         return f.read()
 
 
-def read_version():
-    try:
-        import setuptools_scm
-    except ImportError as ex:
-        raise ImportError(
-            "setuptools_scm not found. When running setup.py directly, "
-            "setuptools_scm needs to be installed manually. "
-            "Or consider running `pip install -e .` instead."
-        )
-    return setuptools_scm.get_version()
-
-
-__version__ = read_version()
+__version__ = '1.1.0'
 
 
 # brought from https://github.com/kennethreitz/setup.py
